@@ -1,4 +1,4 @@
-grnerate dummy log using Faker.js
+generate dummy log using Faker.js
 ----------------------------------
 
 How to use?

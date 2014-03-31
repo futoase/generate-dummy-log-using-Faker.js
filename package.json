@@ -6,7 +6,8 @@
   "dependencies": {
     "Faker": "~0.7.0",
     "moment": "^2.5.1",
-    "mustache": "^0.8.1"
+    "mustache": "^0.8.1",
+    "optparse": "^1.0.5"
   },
   "devDependencies": {},
   "scripts": {

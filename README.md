@@ -6,7 +6,7 @@ How to use?
 
 ```
 > npm install
-> node index.js
+> node index.js -f [FILE NAME] -t [TICK TIME (micro seconds)]
 ```
 
 **How stop it?**

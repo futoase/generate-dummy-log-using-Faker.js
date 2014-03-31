@@ -27,11 +27,14 @@ parser.on('tick', function(name, value) {
 
 parser.parse(process.argv);
 
-var ROW_TEMPLATE = "[{{ createdAt }}] - user_id: {{ userId }} name: {{ name }} ip: {{ ipAddress }}\n";
+var ROW_TEMPLATE = "[{{ createdAt }}] - id: {{ id }} user_id: {{ userId }} name: {{ name }} ip: {{ ipAddress }}\n";
+
+var rowCount = 0;
 
 setInterval(function() {
 
   var record = Mustache.render(ROW_TEMPLATE, {
+    id: rowCount,
     userId: Faker.Helpers.randomNumber(100000),
     name: Faker.Name.findName(),
     ipAddress: Faker.Internet.ip(),
@@ -40,5 +43,7 @@ setInterval(function() {
 
   fs.appendFileSync(options.filePath, record);
   console.log(record);
+
+  rowCount += 1;
 
 }, options.tick);
